@@ -42,7 +42,8 @@ module.exports = () => {
 
       // Add the InjectManifest plugin to generate a service worker
       new InjectManifest({
-        swSrc: './src/src-sw.js',
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js'
       }),
     ],
 
