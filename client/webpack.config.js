@@ -6,25 +6,57 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 // TODO: Add CSS loaders and babel to webpack.
 
-module.exports = () => {
-  return {
-    mode: 'development',
-    entry: {
-      main: './src/js/index.js',
-      install: './src/js/install.js'
-    },
-    output: {
-      filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
-    },
-    plugins: [
-      
+module.exports = {
+  mode: 'development',
+  entry: './client/src/js/index.js', // Replace with your client-side entry point
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './client/index.html',
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
-
-    module: {
-      rules: [
-        
-      ],
-    },
-  };
+  },
 };
+
+// module.exports = () => {
+//   return {
+//     mode: 'development',
+//     entry: {
+//       main: './src/js/index.js',
+//       install: './src/js/install.js'
+//     },
+//     output: {
+//       filename: '[name].bundle.js',
+//       path: path.resolve(__dirname, 'dist'),
+//     },
+//     plugins: [
+      
+//     ],
+
+//     module: {
+//       rules: [
+        
+//       ],
+//     },
+//   };
+// };
