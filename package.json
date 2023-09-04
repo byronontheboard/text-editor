@@ -13,7 +13,6 @@
   "keywords": [],
   "dependencies": {
     "express": "4.17.1",
-    "concurrently": "5.2.0",
-    "aadata": "2.8.4"
+    "concurrently": "5.2.0"
   }
 }
