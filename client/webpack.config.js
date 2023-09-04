@@ -19,7 +19,7 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: 'index.html',
+        template: './index.html',
         // Output HTML file name
         title: 'J.A.T.E.', 
       }),
