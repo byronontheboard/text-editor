@@ -21,7 +21,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: 'index.html',
         // Output HTML file name
-        filename: 'J.A.T.E.', 
+        title: 'J.A.T.E.', 
       }),
 
       // Add the WebpackPwaManifest plugin to generate a manifest file
@@ -61,6 +61,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },
