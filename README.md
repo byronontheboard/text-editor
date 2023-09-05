@@ -1,4 +1,9 @@
-# Text Editor
+# Ontheboard Text Editor | ╰( ⁰ ਊ ⁰ )━☆ﾟ.*･｡ﾟ
+This application is a single page text editor that can run on your browser. Additionally, the user has the option to `install` this application so that they can access it from their desktop offline. To get this running, I have utilized `IndexedDB` database for getting and storing data, and a `idb` as a wrapper around this `IndexedDB` API.
+
+<img width="795" alt="Screen Shot 2023-09-04 at 5 21 57 PM" src="https://github.com/byronontheboard/text-editor/assets/127366720/f1a09956-adf5-4ebc-8411-41c4d199ed86">
+
+----
 
 ## Acceptance Criteria
 
